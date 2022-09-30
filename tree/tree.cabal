@@ -21,6 +21,7 @@ library
                       ,Tree.Data.Definition.DepthTree
                       ,Tree.Data.Definition.Treeable
                       ,Tree.Control.Transformation
+                      ,Tree.Data.Analysis
   other-modules:       Tree.Data.Utils
   build-depends:       base >= 4.7 && < 5
                       ,split
