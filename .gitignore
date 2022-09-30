@@ -1,4 +1,4 @@
 .stack-work/
 *~
-.vscode
-*.lock
+.vscode/
+stack.yaml.lock
