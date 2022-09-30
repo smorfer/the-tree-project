@@ -18,6 +18,7 @@ library
   hs-source-dirs:      src
   exposed-modules:     Tree
                       ,Tree.Data.Definition
+                      ,Tree.Data.Definition.DepthTree
                       ,Tree.Data.Definition.Treeable
                       ,Tree.Control.Transformation
   other-modules:       Tree.Data.Utils
