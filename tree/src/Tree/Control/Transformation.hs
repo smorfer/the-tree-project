@@ -1,4 +1,4 @@
-module Tree.Control.Transformation (transformTtoTFI, transformTFItoDT, transformTtoDT) where
+module Tree.Control.Transformation (transformTtoTFI, transformTFItoDT, transformTtoDT, transformTFItoT) where
 
 import           Tree.Data.Definition           (Tree (..), TreeF (TreeF))
 import           Tree.Data.Definition.DepthTree (DepthTree (..))
