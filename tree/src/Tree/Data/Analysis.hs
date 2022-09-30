@@ -1,6 +1,7 @@
-module Tree.Data.Analysis (tMass, tWidth, tDepth, dtDepth) where
+module Tree.Data.Analysis (tMass, tWidth, tDepth, dtDepth, getTrunk) where
 
-import           Tree.Data.Definition.DepthTree (DepthTree (getDT))
+import           Data.List                      (sortBy)
+import           Tree.Data.Definition.DepthTree (DepthTree, getDT)
 import           Tree.Data.Definition.Treeable  (Treeable (..))
 
 tMass :: Treeable t => t -> Integer
@@ -20,3 +21,11 @@ tDepth t = case splitT t of
 -- This is observable, when looking at the special case of the DepthTree itself
 dtDepth :: DepthTree -> Integer
 dtDepth = maximum . getDT
+
+getTrunk :: Treeable t => t -> (t, [t])
+getTrunk t = case splitT t of
+  [] -> (mergeT [],[])
+  ts -> let ts' = sortBy (\a b -> compare (tDepth b) (tDepth a)) ts
+            dst = head ts'
+            dsts = tail ts'
+            in (dst, dsts)
