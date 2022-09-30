@@ -23,6 +23,7 @@ executable tree-view
                       ,tree
   other-modules:       TreeView
                       ,TreeView.Default
+                      ,TreeView.TreeVisualization
   ghc-options:         -Wall
                        -Wcompat
                        -Widentities
