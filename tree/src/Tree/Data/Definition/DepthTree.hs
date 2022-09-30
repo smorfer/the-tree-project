@@ -9,6 +9,7 @@ newtype DepthTreeF a where
   DepthTreeF :: [a] -> DepthTreeF a
   deriving Functor via []
 
+-- TODO: Use NonEmpty List
 newtype DepthTree = DepthTree { getDT :: [Integer]}
 
 instance Show DepthTree where
