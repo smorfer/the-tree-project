@@ -22,6 +22,7 @@ executable tree-view
                       ,gloss
                       ,tree
   other-modules:       TreeView
+                      ,TreeView.Default
   ghc-options:         -Wall
                        -Wcompat
                        -Widentities
