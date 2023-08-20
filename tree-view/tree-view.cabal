@@ -24,6 +24,7 @@ executable tree-view
   other-modules:       TreeView
                       ,TreeView.Default
                       ,TreeView.TreeVisualization
+                      ,TreeView.UI
   ghc-options:         -Wall
                        -Wcompat
                        -Widentities
@@ -33,3 +34,22 @@ executable tree-view
                        -Wmissing-home-modules
                        -Wpartial-fields
                        -Wredundant-constraints
+
+library
+  hs-source-dirs:      src
+  exposed-modules:     TreeView
+  other-modules:       TreeView.Default
+                      ,TreeView.TreeVisualization
+                      ,TreeView.UI
+  build-depends:       base >= 4.7 && < 5
+                      ,gloss
+                      ,tree
+  default-language:    Haskell2010
+  ghc-options:         -Wall
+                       -Wcompat
+                       -Widentities
+                       -Wincomplete-record-updates
+                       -Wincomplete-uni-patterns
+                       -Wmissing-export-lists
+                       -Wmissing-home-modules
+                       -Wpartial-fields

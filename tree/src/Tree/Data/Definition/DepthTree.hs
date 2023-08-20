@@ -25,3 +25,6 @@ instance Treeable DepthTree where
   splitT (DepthTree [])       = error "splitT: DepthTree empty"
   splitT (DepthTree [0]) = []
   splitT (DepthTree (_ : is)) = DepthTree <$> (fmap pred <$> split (startsWith [1]) is )
+
+-- verifyDepthTree :: [Integer] -> Maybe DepthTree
+-- verifyDepthTree is = verifyDT

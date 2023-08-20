@@ -1,5 +1,5 @@
 module Main (main) where
-import           TreeView (runTreeView)
+import           TreeView (runTreeGallery)
 
 main :: IO ()
-main = runTreeView
+main = runTreeGallery

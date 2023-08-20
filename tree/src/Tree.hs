@@ -1,3 +1,4 @@
-module Tree (Tree(..), TreeF(..)) where
+module Tree (Tree(..), TreeF(..), getTContents, Treeable(..)) where
 
-import           Tree.Data.Definition (Tree(..), TreeF(..))
+import           Tree.Data.Definition (Tree (..), TreeF (..), Treeable (..),
+                                       getTContents)

@@ -4,7 +4,7 @@
 {-# LANGUAGE InstanceSigs      #-}
 {-# LANGUAGE RankNTypes        #-}
 
-module Tree.Data.Definition (Tree(..), TreeF(..)) where
+module Tree.Data.Definition (Tree(..), TreeF(..), getTContents, Treeable(..)) where
 
 import           Tree.Data.Definition.Treeable (Treeable (..), TreeableF (..))
 import           Tree.Data.Utils               (Fillable (..))
@@ -29,8 +29,9 @@ instance TreeableF TreeF where
   splitTF :: TreeF a -> [TreeF a]
   splitTF (TreeF _ tfs) = tfs
 
-
 instance Functor TreeF where
   fmap :: (a -> b) -> TreeF a -> TreeF b
   fmap f (TreeF a tfs) = TreeF (f a) (fmap (fmap f) tfs)
 
+getTContents :: TreeF a -> [a]
+getTContents (TreeF a tfs) = a : concatMap getTContents tfs
